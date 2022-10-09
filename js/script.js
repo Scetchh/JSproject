@@ -18,7 +18,7 @@ const personalMovieDB = {
 
 function rememberMyFilms () {
     for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотренных фильмов?', ''),
+        const a = prompt('Один из последних просмотренных фильмов?', '').trim(),
               b = prompt('На сколько оцените его по 10-бальной шкале?', '');
         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
             personalMovieDB.movies[a] = b;
@@ -60,38 +60,6 @@ function writeYourGenres () {
 }
 writeYourGenres();
 
-/* function showMyBD() {
-    if (personalMovieDB.privat == false) {
-        console.log(personalMovieDB);
-    }
-}
-showMyBD(); */
-
-
-
-
-/* /* function getMathResult(num, times) {
-    if (typeof(times) !== 'number' || times <= 0) {
-        return num;
-    }
-
-    let str = '';
-
-    for (let i = 1; i <= times; i++) {
-        if (i === times) {
-            str += `${num * i}`;
-            // Тут без черточек в конце
-        } else {
-            str += `${num * i}---`;
-            // Это тоже самое, что и
-            // str = str + num * i + "---"
-        }
-    }
-
-    return str;
-} 
-
-console.log(getMathResult(10, 5)); */
 
 
 
@@ -100,21 +68,20 @@ console.log(getMathResult(10, 5)); */
 
 
 
-/* Задача про вывод фигур из * */
-/* const lines = 5;
-let result = '';
 
-for (let i = 0; i <= lines; i++) {
-    for (let j = 0; j < lines - i; j++) {
-        result += " ";
-    }
-    for (let j = 0; j < 2 * i + 1; j++) {
-        result += "*";
-    }
-    result += "\n";
-}
 
-console.log(result); */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
