@@ -49,3 +49,79 @@ for (let i = 0; i <= lines; i++) {
 }
 
 console.log(result); */
+/* function fib(num) {
+    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+        return "";
+    }
+
+    let result = '';
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if (i + 1 === num) {
+            result += `${first}`;
+            // Без пробела в конце
+        } else {
+            result += `${first}`;
+        }
+
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+
+    return console.log(result);
+}
+
+fib(6); */
+/* const personalPlanPeter = {
+    name: "Peter",
+    age: "31",
+    skills: {
+        languages: ['ru', 'ua'],
+        programmingLangs: {
+            js: '',
+            php: ''
+        },
+        exp: '1 month'
+    },
+    showAgeAndLangs: function(plan) {
+        let str = '';
+        const {age} = plan;
+        const {languages} = plan.skills;
+        let lang = languages.join(' ').toUpperCase();
+        str += `Мне ${age} и я владею языками: ${lang} `;
+        console.log(str);
+    }
+};
+
+personalPlanPeter.showAgeAndLangs(personalPlanPeter); */
+
+
+const family = [];
+
+function showFamily(arr) {
+    let str = '';
+    if (arr.length === 0) {
+        str = 'Семья пуста';
+        console.log(str);
+    } else {
+        for (let i = 0; i< arr.length; i++) {
+            str += `${arr[i]} `;
+        }
+        console.log(`Семья состоит из ${str} `);
+    }
+}
+showFamily(family);
+
+
+
+
+
+function showFamily(arr) {
+    arr.forEach(function(item, i, arr) {
+        console.log(`Семья состоит из ${item}`);
+    });
+
+}
