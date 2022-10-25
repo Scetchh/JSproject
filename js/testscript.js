@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 
 /* Задача про часы и минуты
 function getTimeFromMinutes(time) {
@@ -99,7 +99,7 @@ fib(6); */
 personalPlanPeter.showAgeAndLangs(personalPlanPeter); */
 
 
-const family = [];
+/* const family = ['Peter', 'Anna', 'Pavel'];
 
 function showFamily(arr) {
     let str = '';
@@ -113,15 +113,25 @@ function showFamily(arr) {
         console.log(`Семья состоит из ${str} `);
     }
 }
-showFamily(family);
+showFamily(family); */
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+const wallets = [...baseCurrencies, ...additionalCurrencies];
 
-
-
-
-
-function showFamily(arr) {
-    arr.forEach(function(item, i, arr) {
-        console.log(`Семья состоит из ${item}`);
+function availableCurr(arr, missingCurr) {
+    let str = "";
+    if (arr.length < 1) {
+        console.log('Нет доступных валют');
+    } else {
+    str = 'Доступные валюты:\n';
+    let myIndex = arr.indexOf(missingCurr);
+    arr.splice(myIndex, 1);
+    arr.forEach(function(curr) {
+        str += `${curr}\n`;
     });
-
+    console.log(str);
+    }
 }
+
+availableCurr(wallets, 'EUR');
+
